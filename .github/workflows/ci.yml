@@ -1,0 +1,69 @@
+name: CI — nectar-ui
+
+on:
+  pull_request:
+    branches: [main, dev]
+  push:
+    branches: [dev]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build + Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build
+
+      - name: Verify token generation
+        run: |
+          if [ ! -f "css/tokens.css" ]; then
+            echo "::error::css/tokens.css not found after build"
+            exit 1
+          fi
+          LINE_COUNT=$(wc -l < css/tokens.css)
+          if [ "$LINE_COUNT" -lt 100 ]; then
+            echo "::error::Token file too short ($LINE_COUNT lines). Expected 100+. Pipeline may be broken."
+            exit 1
+          fi
+          echo "Token CSS: $LINE_COUNT lines — pipeline intact."
+
+      - name: Verify dist output
+        run: |
+          REQUIRED=(
+            "dist/index.js"
+            "dist/index.d.ts"
+            "dist/tokens.css"
+            "dist/theme.css"
+          )
+          MISSING=0
+          for f in "${REQUIRED[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "MISSING: $f"
+              MISSING=1
+            fi
+          done
+          if [ $MISSING -eq 1 ]; then
+            echo "::error::Build output incomplete"
+            exit 1
+          fi
+          echo "All required dist files present."
