@@ -52,6 +52,9 @@
     "components",
     "ui"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "author": "Tushar Kant Naik <hi@tusharkantnaik.com>",
   "license": "MIT",
   "repository": {
