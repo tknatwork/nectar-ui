@@ -1,0 +1,65 @@
+{
+  "name": "nectar-ui",
+  "version": "0.1.0",
+  "description": "Design token pipeline + React component library. 3-tier token architecture with Tailwind v4 integration.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css"
+  },
+  "files": [
+    "dist",
+    "tokens",
+    "scripts/build-tokens.cjs"
+  ],
+  "scripts": {
+    "prebuild": "node scripts/build-tokens.cjs",
+    "build": "tsup && cp css/tokens.css dist/tokens.css && cp css/theme.css dist/theme.css",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "tailwindcss": ">=4"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsup": "^8.5.0",
+    "typescript": "~5.9.3"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "react",
+    "tailwindcss",
+    "cva",
+    "components",
+    "ui"
+  ],
+  "author": "Tushar Kant Naik <hi@tusharkantnaik.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tknatwork/nectar-ui.git"
+  },
+  "homepage": "https://github.com/tknatwork/nectar-ui#readme",
+  "bugs": {
+    "url": "https://github.com/tknatwork/nectar-ui/issues"
+  }
+}

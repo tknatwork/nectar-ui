@@ -1,0 +1,395 @@
+/* ==========================================================================
+   nectar-ui — Generated Tokens
+   Do not edit manually. Run: node scripts/build-tokens.js
+
+   Tier 1: Seed   (--seed-*)       → Raw primitives
+   Tier 2: Alias  (--color-*, etc) → Semantic meaning
+   Tier 3: Mapped (--bg, --fg)     → Theme-specific (light/dark)
+   ========================================================================== */
+
+@layer tokens {
+
+  :root {
+  /* === TIER 1: Seed (Primitives) === */
+
+  /* color */
+  --seed-color-pastel-lavender: #E8D5F5; /* Soft purple */
+  --seed-color-pastel-mint: #D5F5E3; /* Soft green */
+  --seed-color-pastel-peach: #FADADD; /* Soft pink-orange */
+  --seed-color-pastel-coral: #F5B7B1; /* Warm pink — primary brand */
+  --seed-color-pastel-coralLight: #FBE0DC; /* Light coral tint */
+  --seed-color-pastel-coralDeep: #E8948C; /* Deep coral for dark-mode accents */
+  --seed-color-pastel-rose: #D4654F; /* Warm terracotta — dark mode destructive */
+  --seed-color-pastel-ember: #C0503E; /* Deep terracotta — light mode destructive */
+  --seed-color-pastel-sage: #D5E1D5; /* Muted green */
+  --seed-color-pastel-spring: #A3D9B8; /* Spring green — midpoint between meadow & mint */
+  --seed-color-pastel-meadow: #7BC89A; /* Bright soft green — dark mode success */
+  --seed-color-pastel-forest: #3D7A5E; /* Deep muted green */
+  --seed-color-pastel-lichen: #E8E6C8; /* Pale olive — warm yellow-green tint */
+  --seed-color-pastel-olive: #8B9A6B; /* Olive — classic muted yellow-green */
+  --seed-color-pastel-moss: #6B7F4E; /* Moss — deep earthy green */
+  --seed-color-pastel-pine: #4A5E35; /* Pine — darkest olive, forest floor */
+  --seed-color-pastel-blush: #F5D5E0; /* Light rose */
+  --seed-color-pastel-wisteria: #C3A6D4; /* Medium purple — warm lilac */
+  --seed-color-pastel-plum: #7B5C8E; /* Deep purple — rich plum */
+  --seed-color-pastel-sky: #D5E8F5; /* Soft blue */
+  --seed-color-pastel-skyLight: #EAF4FB; /* Lightest blue tint */
+  --seed-color-pastel-skyMid: #B3D4F0; /* Medium blue */
+  --seed-color-pastel-azure: #A8C8E8; /* Steel blue — muted */
+  --seed-color-pastel-navy: #3D5A80; /* Muted navy — dark accent for dark mode */
+  --seed-color-pastel-lemon: #FFF9C4; /* Soft yellow */
+  --seed-color-pastel-butter: #FFF3A3; /* Warm butter yellow */
+  --seed-color-pastel-honey: #FFE082; /* Rich golden yellow */
+  --seed-color-pastel-honeyDeep: #D4A843; /* Deep honey for dark mode primary */
+  --seed-color-pastel-cream: #FFFDF5; /* Off-white warm yellow */
+  --seed-color-pastel-fog: #F0EDED; /* Cool light grey */
+  --seed-color-pastel-ash: #D9D5D2; /* Warm mid grey */
+  --seed-color-pastel-slate: #8B8589; /* Cool dark grey */
+  --seed-color-pastel-graphite: #3E3A44; /* Dark warm grey — deeper than slate */
+  --seed-color-pastel-cloud: #F7F5F3; /* Warm off-white */
+  --seed-color-pastel-nearBlack: #12101A; /* Near-black — 2 shades darker than graphite */
+  --seed-color-neutral-50: #FAFAF9;
+  --seed-color-neutral-100: #F5F5F4;
+  --seed-color-neutral-200: #E7E5E4;
+  --seed-color-neutral-300: #D6D3D1;
+  --seed-color-neutral-400: #A8A29E;
+  --seed-color-neutral-500: #78716C;
+  --seed-color-neutral-600: #57534E;
+  --seed-color-neutral-700: #44403C;
+  --seed-color-neutral-800: #292524;
+  --seed-color-neutral-900: #1C1917;
+  --seed-color-neutral-950: #0C0A09;
+  --seed-color-ink: #1A1A2E; /* Deep dark — primary text & borders */
+  --seed-color-white: #FFFFFF;
+  --seed-color-black: #000000;
+  --seed-color-danger: #D96B5C; /* Terracotta — softer error, harmonizes with pastels */
+  --seed-color-success: #5BAD7A; /* Muted sage — softer success, harmonizes with mint/sage */
+  --seed-color-warning: #F39C12; /* Warning / caution */
+
+  /* spacing */
+  --seed-spacing-0: 0;
+  --seed-spacing-1: 4px;
+  --seed-spacing-2: 8px;
+  --seed-spacing-3: 12px;
+  --seed-spacing-4: 16px;
+  --seed-spacing-5: 20px;
+  --seed-spacing-6: 24px;
+  --seed-spacing-8: 32px;
+  --seed-spacing-10: 40px;
+  --seed-spacing-12: 48px;
+  --seed-spacing-16: 64px;
+  --seed-spacing-20: 80px;
+  --seed-spacing-24: 96px;
+
+  /* breakpoint */
+  --seed-breakpoint-android: 360px; /* Android minimum — Galaxy/Pixel base viewport */
+  --seed-breakpoint-ios: 390px; /* iOS minimum — iPhone 16e viewport */
+  --seed-breakpoint-tablet: 768px; /* Tablet — iPad Mini portrait */
+  --seed-breakpoint-desktop: 1024px; /* Desktop — laptops/iPad Pro landscape */
+  --seed-breakpoint-wide: 1440px; /* Wide desktop — QHD+ displays */
+
+  /* container */
+  --seed-container-sm: 640px; /* Small container max-width */
+  --seed-container-md: 768px; /* Medium container max-width */
+  --seed-container-lg: 1200px; /* Desktop container max-width */
+  --seed-container-xl: 1400px; /* Wide container max-width */
+
+  /* typography */
+  --seed-typography-fontFamily-sans: 'Switzer', sans-serif; /* Primary — geometric sans */
+  --seed-typography-fontFamily-mono: 'Roboto Mono', monospace; /* Code blocks */
+  --seed-typography-fontFamily-caption: 'Merriweather', serif; /* Captions & pull quotes */
+  --seed-typography-fontFamily-display: 'Libre Baskerville', serif; /* Serif display — all headings */
+  --seed-typography-fontSize-xs: 0.64rem; /* ~10px — fine print */
+  --seed-typography-fontSize-sm: 0.8rem; /* ~13px — small / caption */
+  --seed-typography-fontSize-base: 1rem; /* 16px — body */
+  --seed-typography-fontSize-md: 1.25rem; /* ~20px — title 3 / h6 */
+  --seed-typography-fontSize-lg: 1.563rem; /* ~25px — title 2 / h5 */
+  --seed-typography-fontSize-xl: 1.953rem; /* ~31px — title 1 / h4 */
+  --seed-typography-fontSize-2xl: 2.441rem; /* ~39px — h3 */
+  --seed-typography-fontSize-3xl: 3.052rem; /* ~49px — h2 */
+  --seed-typography-fontSize-4xl: 3.815rem; /* ~61px — h1 */
+  --seed-typography-fontWeight-normal: 400;
+  --seed-typography-fontWeight-medium: 500;
+  --seed-typography-fontWeight-semibold: 600;
+  --seed-typography-fontWeight-bold: 700;
+  --seed-typography-fontWeight-black: 900;
+  --seed-typography-lineHeight-tight: 1.25;
+  --seed-typography-lineHeight-normal: 1.5;
+  --seed-typography-lineHeight-relaxed: 1.75;
+
+  /* borderWidth */
+  --seed-borderWidth-0: 0;
+  --seed-borderWidth-1: 1px;
+  --seed-borderWidth-2: 2px;
+  --seed-borderWidth-3: 3px; /* Neo-brutalist default */
+  --seed-borderWidth-4: 4px;
+
+  /* borderRadius */
+  --seed-borderRadius-none: 0; /* Sharp corners — default */
+  --seed-borderRadius-sm: 4px;
+  --seed-borderRadius-md: 8px;
+  --seed-borderRadius-lg: 12px;
+  --seed-borderRadius-xl: 16px;
+  --seed-borderRadius-full: 9999px;
+
+  /* shadow */
+  --seed-shadow-sm: 2px 2px 0 0; /* Small hard shadow */
+  --seed-shadow-md: 4px 4px 0 0; /* Medium hard shadow */
+  --seed-shadow-lg: 6px 6px 0 0; /* Large hard shadow */
+  --seed-shadow-xl: 8px 8px 0 0; /* Extra large hard shadow */
+
+  /* opacity */
+  --seed-opacity-0: 0;
+  --seed-opacity-25: 0.25;
+  --seed-opacity-50: 0.5;
+  --seed-opacity-75: 0.75;
+  --seed-opacity-100: 1;
+
+  /* zIndex */
+  --seed-zIndex-0: 0;
+  --seed-zIndex-10: 10;
+  --seed-zIndex-20: 20;
+  --seed-zIndex-30: 30;
+  --seed-zIndex-40: 40;
+  --seed-zIndex-50: 50;
+
+  /* motion */
+  --seed-motion-duration-instant: 0.05s; /* Micro-interactions (button press) */
+  --seed-motion-duration-fast: 0.12s; /* Quick transitions (hover, toggle) */
+  --seed-motion-duration-base: 0.2s; /* Standard transitions */
+  --seed-motion-duration-slow: 0.3s; /* Complex transitions (expand, slide) */
+  --seed-motion-duration-slower: 0.5s; /* Page-level transitions */
+  --seed-motion-easing-easeOut: cubic-bezier(0.215, 0.61, 0.355, 1); /* Default exit — smooth deceleration */
+  --seed-motion-easing-easeInOut: cubic-bezier(0.645, 0.045, 0.355, 1); /* Symmetric — enter + exit */
+  --seed-motion-easing-easeOutCirc: cubic-bezier(0.08, 0.82, 0.17, 1); /* Snappy exit — organic feel */
+  --seed-motion-easing-easeInOutCirc: cubic-bezier(0.78, 0.14, 0.15, 0.86); /* Snappy symmetric */
+  --seed-motion-easing-easeOutBack: cubic-bezier(0.12, 0.4, 0.29, 1.46); /* Bouncy overshoot — playful */
+  --seed-motion-easing-easeInBack: cubic-bezier(0.71, -0.46, 0.88, 0.6); /* Anticipation pull-back */
+  --seed-motion-easing-easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1); /* Aggressive deceleration */
+  --seed-motion-easing-easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06); /* Slow start, fast end */
+
+  /* === TIER 2: Alias (Semantic) === */
+
+  /* color */
+  --color-primary: var(--seed-color-pastel-honey); /* Primary brand color (honey golden) */
+  --color-primary-fg: var(--seed-color-ink); /* Text on primary */
+  --color-accent: var(--seed-color-pastel-skyMid); /* Accent (sky mid — cool complement to honey) */
+  --color-accent-fg: var(--seed-color-ink); /* Text on accent */
+  --color-destructive: var(--seed-color-danger);
+  --color-destructive-fg: var(--seed-color-white);
+  --color-success: var(--seed-color-success);
+  --color-success-fg: var(--seed-color-white);
+  --color-warning: var(--seed-color-warning);
+  --color-warning-fg: var(--seed-color-ink);
+  --color-neutral-base: var(--seed-color-neutral-500);
+  --color-neutral-light: var(--seed-color-neutral-100);
+  --color-neutral-dark: var(--seed-color-neutral-900);
+
+  /* spacing */
+  --spacing-xs: var(--seed-spacing-1); /* 4px — tight */
+  --spacing-sm: var(--seed-spacing-2); /* 8px — small gaps */
+  --spacing-md: var(--seed-spacing-4); /* 16px — default */
+  --spacing-lg: var(--seed-spacing-6); /* 24px — sections */
+  --spacing-xl: var(--seed-spacing-8); /* 32px — large gaps */
+  --spacing-2xl: var(--seed-spacing-12); /* 48px — major gaps */
+  --spacing-section: var(--seed-spacing-24); /* 96px — between sections */
+  --spacing-padding-button-h: var(--seed-spacing-3); /* 12px — Ant standard horizontal button padding */
+  --spacing-padding-button-v: var(--seed-spacing-1); /* 4px — Ant standard vertical button padding */
+  --spacing-gap-component: var(--seed-spacing-2); /* 8px — gap within components */
+  --spacing-gap-section: var(--seed-spacing-4); /* 16px — gap between component groups */
+
+  /* typography */
+  --heading-1-fontSize: var(--seed-typography-fontSize-4xl);
+  --heading-1-fontWeight: var(--seed-typography-fontWeight-bold);
+  --heading-1-lineHeight: var(--seed-typography-lineHeight-tight);
+  --heading-1-fontFamily: var(--seed-typography-fontFamily-display);
+  --heading-2-fontSize: var(--seed-typography-fontSize-3xl);
+  --heading-2-fontWeight: var(--seed-typography-fontWeight-bold);
+  --heading-2-lineHeight: var(--seed-typography-lineHeight-tight);
+  --heading-2-fontFamily: var(--seed-typography-fontFamily-display);
+  --heading-3-fontSize: var(--seed-typography-fontSize-2xl);
+  --heading-3-fontWeight: var(--seed-typography-fontWeight-semibold);
+  --heading-3-lineHeight: var(--seed-typography-lineHeight-tight);
+  --heading-3-fontFamily: var(--seed-typography-fontFamily-display);
+  --heading-4-fontSize: var(--seed-typography-fontSize-xl);
+  --heading-4-fontWeight: var(--seed-typography-fontWeight-semibold);
+  --heading-4-lineHeight: var(--seed-typography-lineHeight-normal);
+  --heading-4-fontFamily: var(--seed-typography-fontFamily-display);
+  --heading-5-fontSize: var(--seed-typography-fontSize-lg);
+  --heading-5-fontWeight: var(--seed-typography-fontWeight-medium);
+  --heading-5-lineHeight: var(--seed-typography-lineHeight-normal);
+  --heading-5-fontFamily: var(--seed-typography-fontFamily-display);
+  --heading-6-fontSize: var(--seed-typography-fontSize-md);
+  --heading-6-fontWeight: var(--seed-typography-fontWeight-medium);
+  --heading-6-lineHeight: var(--seed-typography-lineHeight-normal);
+  --heading-6-fontFamily: var(--seed-typography-fontFamily-display);
+  --title-1-fontSize: var(--seed-typography-fontSize-xl);
+  --title-1-fontWeight: var(--seed-typography-fontWeight-semibold);
+  --title-1-lineHeight: var(--seed-typography-lineHeight-normal);
+  --title-1-fontFamily: var(--seed-typography-fontFamily-sans);
+  --title-2-fontSize: var(--seed-typography-fontSize-lg);
+  --title-2-fontWeight: var(--seed-typography-fontWeight-medium);
+  --title-2-lineHeight: var(--seed-typography-lineHeight-normal);
+  --title-2-fontFamily: var(--seed-typography-fontFamily-sans);
+  --title-3-fontSize: var(--seed-typography-fontSize-md);
+  --title-3-fontWeight: var(--seed-typography-fontWeight-medium);
+  --title-3-lineHeight: var(--seed-typography-lineHeight-normal);
+  --title-3-fontFamily: var(--seed-typography-fontFamily-sans);
+  --body-base-fontSize: var(--seed-typography-fontSize-base);
+  --body-base-fontWeight: var(--seed-typography-fontWeight-normal);
+  --body-base-lineHeight: var(--seed-typography-lineHeight-normal);
+  --body-sm-fontSize: var(--seed-typography-fontSize-sm);
+  --body-sm-lineHeight: var(--seed-typography-lineHeight-normal);
+  --body-lg-fontSize: var(--seed-typography-fontSize-md);
+  --body-lg-lineHeight: var(--seed-typography-lineHeight-relaxed);
+  --caption-fontFamily: var(--seed-typography-fontFamily-caption);
+  --caption-fontSize: var(--seed-typography-fontSize-sm);
+  --caption-lineHeight: var(--seed-typography-lineHeight-normal);
+  --code-fontFamily: var(--seed-typography-fontFamily-mono);
+  --code-fontSize: var(--seed-typography-fontSize-sm);
+  --code-lineHeight: var(--seed-typography-lineHeight-normal);
+
+  /* grid */
+  --grid-columns-mobile: 4; /* Mobile columns (Android + iOS) */
+  --grid-columns-tablet: 8; /* Tablet columns */
+  --grid-columns-desktop: 12; /* Desktop/wide columns */
+  --grid-gutter-mobile: var(--seed-spacing-4); /* 16px mobile gutter */
+  --grid-gutter-tablet: var(--seed-spacing-6); /* 24px tablet/desktop gutter */
+  --grid-gutter-wide: var(--seed-spacing-8); /* 32px wide gutter */
+  --grid-margin-android: var(--seed-spacing-4); /* 16px Android margin */
+  --grid-margin-ios: var(--seed-spacing-5); /* 20px iOS margin */
+  --grid-margin-tablet: var(--seed-spacing-8); /* 32px tablet margin */
+  --grid-margin-desktop: var(--seed-spacing-10); /* 40px desktop margin */
+  --grid-margin-wide: var(--seed-spacing-12); /* 48px wide margin */
+  --grid-max-width-desktop: var(--seed-container-lg); /* 1200px desktop container */
+  --grid-max-width-wide: var(--seed-container-xl); /* 1400px wide container */
+
+  /* border */
+  --border-w: var(--seed-borderWidth-3); /* Default thick border (neo-brutalist) */
+  --border-radius: var(--seed-borderRadius-sm); /* Small radius (4px) — structured, less bubbly */
+
+  /* shadow */
+  --shadow: var(--seed-shadow-md); /* Default hard shadow */
+
+  /* motion — transitions (duration + easing composed) */
+  --transition-fast: var(--seed-motion-duration-instant) var(--seed-motion-easing-easeOutCirc); /* Instant snap — near-zero delay, snappy curve */
+  --transition-base: var(--seed-motion-duration-base) var(--seed-motion-easing-easeOut); /* Standard smooth — default for most interactions */
+  --transition-bounce: var(--seed-motion-duration-slow) var(--seed-motion-easing-easeOutBack); /* Slow + overshoot — playful, visible bounce */
+  --transition-snap: var(--seed-motion-duration-fast) var(--seed-motion-easing-easeInOutCirc); /* Quick + symmetric — punchy, mechanical feel */
+  }
+
+  /* === TIER 3: Mapped (Theme) === */
+
+  /* Light mode (default) */
+  :root {
+    --bg: #FFFDF5; /* Cream — warm contrast with elements */
+    --fg: #3E3A44; /* Graphite — cool dark grey body text */
+    --surface: #FFFFFF; /* Card / panel — pure white lifts off cream */
+    --surface-fg: #3E3A44; /* Graphite text on surface */
+    --primary: #FFE082; /* Honey (primary) */
+    --primary-fg: #2D2A32; /* Dark text on honey */
+    --accent: #B3D4F0; /* Sky mid (accent) */
+    --accent-fg: #2D2A32; /* Dark text on sky mid */
+    --muted: #F0EDED; /* Fog — subtle grey */
+    --muted-fg: #8B8589; /* Slate text */
+    --border: #C9C5C2; /* Warm ash border — slightly darker for definition */
+    --shadow-color: #D9D5D2; /* Shadow fill — lighter than border for depth */
+    --input: #FFFFFF; /* Input bg — clean white */
+    --ring: #FFE082; /* Focus ring (honey) */
+    --destructive: #C0503E; /* Deep terracotta — richer error, matches link/highlight tone */
+    --destructive-fg: #FFFFFF;
+    --success: #5BAD7A; /* Muted sage — softer success */
+    --success-fg: #FFFFFF; /* White text on darker sage */
+    --warning: #F39C12;
+    --button-bg: #8B8589; /* Default button — slate fill (matches border) */
+    --button-fg: #FFFFFF; /* Default button text — white on slate */
+    --button-border: #8B8589; /* Slate — visible contrast against shadow */
+    --outline-bg: transparent; /* Outline variant bg — transparent, bg shows through */
+    --outline-fg: #2D2A32; /* Outline variant text — dark */
+    --outline-border: #8B8589; /* Outline variant border — slate, visible on transparent */
+    --th-bg: #8B8589; /* Slate table header bg */
+    --th-fg: #FFFFFF; /* White text on table header */
+    --badge-fg: #2D2A32; /* Dark text on pastel badges */
+    --toggle-track: #FFE082; /* Honey — active state shows primary colour */
+    --toggle-thumb: #8B8589; /* Slate — strong visual weight in light mode */
+    --card-primary-bg: #FFF9C4; /* Lemon — soft yellow primary card bg */
+    --card-accent-bg: #EAF4FB; /* Sky light — cool seed accent card bg */
+    --card-text: #5E5965; /* Muted text for card descriptions — softer than fg */
+  }
+
+  /* Dark mode */
+  [data-theme="dark"] {
+    --bg: #1E1B22; /* Warm charcoal — not pure black */
+    --fg: #F7F5F3; /* Cloud — warm off-white body text */
+    --surface: #2A2630; /* Slightly lifted surface */
+    --surface-fg: #F7F5F3; /* Cloud text on surface */
+    --primary: #D4A843; /* Deep honey — vivid on dark */
+    --primary-fg: #1E1B22; /* Dark text on primary */
+    --accent: #3D5A80; /* Navy — muted deep blue, complements honey deep */
+    --accent-fg: #F0EDED; /* Light text on navy */
+    --muted: #2A2630; /* Matches surface */
+    --muted-fg: #8B8589; /* Slate grey — muted text */
+    --border: #5E5965; /* Lighter border — more visible on dark */
+    --shadow-color: #8B8589; /* Slate — defined shadow, visible on dark bg */
+    --input: #2A2630; /* Input bg — matches surface */
+    --ring: #D4A843; /* Focus ring (deep honey) */
+    --destructive: #D4654F; /* Terracotta — visible on dark, cohesive with link tone */
+    --destructive-fg: #1E1B22; /* Dark text on destructive */
+    --success: #7BC89A; /* Lighter sage — visible on dark */
+    --success-fg: #1E1B22; /* Dark text on lighter sage */
+    --warning: #F1C40F;
+    --button-bg: #FFFDF5; /* Default button — cream fill on dark bg */
+    --button-fg: #2D2A32; /* Default button text — dark on cream */
+    --button-border: #FFFDF5; /* Cream — matches button-bg for clean borderless look */
+    --outline-bg: transparent; /* Outline variant bg — transparent, bg shows through */
+    --outline-fg: #F0EDED; /* Outline variant text — light on dark bg */
+    --outline-border: #8B8589; /* Outline variant border — slate, visible on dark */
+    --th-bg: #3E3A44; /* Lighter table header — distinguished from surface */
+    --th-fg: #F0EDED; /* Light text on dark table header */
+    --badge-fg: #2D2A32; /* Dark text on pastel badges (pastels stay light) */
+    --toggle-track: #C4983B; /* Muted honey — softer than primary for toggle */
+    --toggle-thumb: #D9D5D2; /* Ash — softer than fg for toggle */
+    --card-primary-bg: #4A3F20; /* Muted dark honey — readable light text on card */
+    --card-accent-bg: #1E2D3D; /* Dark muted blue — readable light text on card */
+    --card-text: #D9D5D2; /* Ash — softer card description text */
+  }
+
+  /* System preference fallback */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+    --bg: #1E1B22; /* Warm charcoal — not pure black */
+    --fg: #F7F5F3; /* Cloud — warm off-white body text */
+    --surface: #2A2630; /* Slightly lifted surface */
+    --surface-fg: #F7F5F3; /* Cloud text on surface */
+    --primary: #D4A843; /* Deep honey — vivid on dark */
+    --primary-fg: #1E1B22; /* Dark text on primary */
+    --accent: #3D5A80; /* Navy — muted deep blue, complements honey deep */
+    --accent-fg: #F0EDED; /* Light text on navy */
+    --muted: #2A2630; /* Matches surface */
+    --muted-fg: #8B8589; /* Slate grey — muted text */
+    --border: #5E5965; /* Lighter border — more visible on dark */
+    --shadow-color: #8B8589; /* Slate — defined shadow, visible on dark bg */
+    --input: #2A2630; /* Input bg — matches surface */
+    --ring: #D4A843; /* Focus ring (deep honey) */
+    --destructive: #D4654F; /* Terracotta — visible on dark, cohesive with link tone */
+    --destructive-fg: #1E1B22; /* Dark text on destructive */
+    --success: #7BC89A; /* Lighter sage — visible on dark */
+    --success-fg: #1E1B22; /* Dark text on lighter sage */
+    --warning: #F1C40F;
+    --button-bg: #FFFDF5; /* Default button — cream fill on dark bg */
+    --button-fg: #2D2A32; /* Default button text — dark on cream */
+    --button-border: #FFFDF5; /* Cream — matches button-bg for clean borderless look */
+    --outline-bg: transparent; /* Outline variant bg — transparent, bg shows through */
+    --outline-fg: #F0EDED; /* Outline variant text — light on dark bg */
+    --outline-border: #8B8589; /* Outline variant border — slate, visible on dark */
+    --th-bg: #3E3A44; /* Lighter table header — distinguished from surface */
+    --th-fg: #F0EDED; /* Light text on dark table header */
+    --badge-fg: #2D2A32; /* Dark text on pastel badges (pastels stay light) */
+    --toggle-track: #C4983B; /* Muted honey — softer than primary for toggle */
+    --toggle-thumb: #D9D5D2; /* Ash — softer than fg for toggle */
+    --card-primary-bg: #4A3F20; /* Muted dark honey — readable light text on card */
+    --card-accent-bg: #1E2D3D; /* Dark muted blue — readable light text on card */
+    --card-text: #D9D5D2; /* Ash — softer card description text */
+    }
+  }
+}

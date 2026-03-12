@@ -1,0 +1,10 @@
+src/
+tokens/
+scripts/
+tsup.config.ts
+tsconfig.json
+.github/
+.gcc/
+*.md
+!README.md
+!LICENSE
